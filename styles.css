@@ -1,0 +1,541 @@
+:root {
+  --negro: #0a0a0a;
+  --rojo: #b3001b;
+  --azul: #1a75ff;
+  --gris-oscuro: #1e1e1e;
+  --azul-claro: #66ccff;
+  --blanco: #f5f5f5;
+}
+
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--negro);
+        color: var(--blanco);
+        font-family: 'Poppins', sans-serif;
+        scroll-behavior: smooth;
+    }
+
+    header, footer {
+        background-color: var(--gris-oscuro);
+        color: var(--blanco);
+        border-bottom: 2px solid var(--rojo);
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      font-size: 2rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffe0f0;
+    }
+
+    main {
+      padding: 40px 20px;
+    }
+
+    .seccion {
+      margin-bottom: 80px;
+      text-align: center;
+      background-color: var(--gris-oscuro);
+        padding: 60px 20px;
+        border-top: 2px solid var(--rojo);
+        border-bottom: 2px solid var(--azul);
+    }
+
+    h1, h2, h3 {
+    color: var(--rojo);
+    text-shadow: 1px 1px 5px var(--azul);
+    }
+
+    h2 {
+      font-family: 'Pacifico', cursive;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background: #ff6392;
+      border: none;
+      color: white;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    a, .btn, button {
+        background-color: var(--azul);
+        color: var(--blanco);
+        border: none;
+        border-radius: 6px;
+        padding: 10px 20px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+   a:hover, .btn:hover, button:hover {
+    background-color: var(--rojo);
+    box-shadow: 0 0 15px var(--rojo);
+    }
+
+    .galeria-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .galeria-container img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .galeria-container img:hover {
+      transform: scale(1.05);
+    }
+
+    .carta {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    /* === Assassin's Creed SECTION STYLES === */
+.creed-section {
+  position: relative;
+  background: linear-gradient(145deg, #000000, #1a1a1a, #0d0d1a);
+  color: #e0e0e0;
+  font-family: 'Cinzel', serif;
+  padding: 80px 30px;
+  border-top: 3px solid #8b0000;
+  border-bottom: 3px solid #1a75ff;
+  overflow: hidden;
+  text-shadow: 1px 1px 4px #000;
+}
+
+.creed-overlay {
+  background: url('img/assassin_emblem_faded.png') no-repeat center center/contain;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  transform: translateX(-50%);
+  opacity: 0.02;
+  z-index: 1;
+}
+
+.creed-container {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: auto;
+  background: rgba(10, 10, 10, 0.6);
+  border: 2px solid #1a75ff;
+  border-radius: 12px;
+  padding: 60px;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+}
+
+.creed-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #c41c1c;
+  animation: desync 6s infinite ease-in-out;
+}
+
+.galeria-imagenes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.galeria-imagenes img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border: 2px solid var(--azul);
+}
+
+.galeria-imagenes img:hover {
+  transform: scale(1.1);
+}
+
+/* Lightbox */
+#image-lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 10, 0.95);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+#image-lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border: 3px solid var(--rojo);
+  border-radius: 12px;
+  box-shadow: 0 0 30px var(--azul);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.85); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.creed-text {
+  font-size: 1.2rem;
+  line-height: 2;
+  color: #e6e6e6;
+  letter-spacing: 0.5px;
+}
+
+@keyframes desync {
+  0%, 100% {
+    text-shadow: 0 0 10px #8b0000;
+  }
+  50% {
+    text-shadow: 0 0 20px #1a75ff;
+  }
+}
+
+
+    .carta p {
+      margin-bottom: 15px;
+    }
+
+    #sorpresa-container {
+      margin-top: 40px;
+    }
+
+    .caja-sorpresa {
+      width: 150px;
+      height: 150px;
+      background: url('imagenes/caja-cerrada.png') no-repeat center/contain;
+      margin: auto;
+      cursor: pointer;
+      transition: transform 0.4s;
+    }
+
+    .caja-sorpresa.abierta {
+      background-image: url('imagenes/caja-abierta.png');
+      transform: rotateY(180deg);
+    }
+
+    .mensaje-sorpresa {
+      display: none;
+      font-size: 1.5rem;
+      margin-top: 20px;
+      color: #c0392b;
+      animation: aparecer 1s forwards;
+    }
+
+    .mensaje-sorpresa.visible {
+      display: block;
+    }
+
+    @keyframes aparecer {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    footer {
+      padding: 20px;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .carta {
+        padding: 15px;
+      }
+    }
+
+.dark-souls-section {
+  position: relative;
+  background: url('img/fuego_oscuro.jpg') no-repeat center center/cover;
+  padding: 80px 20px;
+  color: #f5f5f5;
+  font-family: 'Cinzel', serif;
+  text-shadow: 2px 2px 5px #000;
+  overflow: hidden;
+}
+
+.dark-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 5, 5, 0.8);
+  z-index: 1;
+}
+
+.lore-container {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: auto;
+  background: rgba(30, 15, 15, 0.6);
+  border: 2px solid #8a1f1f;
+  border-radius: 12px;
+  padding: 40px;
+}
+
+.lore-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+  animation: flicker 3s infinite;
+}
+
+.lore-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+.btn-fire {
+  margin-top: 30px;
+  padding: 12px 25px;
+  background-color: #8a1f1f;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.btn-fire:hover {
+  background-color: #a83232;
+}
+
+.squareenix-section {
+  position: relative;
+  padding: 90px 30px;
+  background: radial-gradient(circle at center, #001a33 0%, #000000 100%);
+  font-family: 'Cinzel Decorative', serif;
+  color: #e0e0ff;
+  text-shadow: 2px 2px 6px #000;
+  overflow: hidden;
+}
+
+.amarant-bg {
+  background: url('img/magia_azul.gif') no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+  z-index: 1;
+  mix-blend-mode: screen;
+}
+
+.amarant-lore {
+  position: relative;
+  z-index: 2;
+  max-width: 850px;
+  margin: auto;
+  background: rgba(10, 10, 25, 0.65);
+  border: 2px solid #8a1f1f;
+  border-radius: 15px;
+  padding: 60px 40px;
+  box-shadow: 0 0 20px #002266;
+}
+
+.amarant-title {
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 25px;
+  color: #4da6ff;
+  animation: pulse 3s infinite;
+}
+
+.amarant-text {
+  font-size: 1.3rem;
+  line-height: 2;
+  color: #dce8ff;
+}
+
+.amarant-glow {
+  width: 120px;
+  height: 120px;
+  margin: 40px auto 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, #4da6ff 0%, #001133 80%);
+  animation: pulseGlow 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    text-shadow: 0 0 10px #4da6ff, 0 0 20px #4da6ff;
+  }
+  50% {
+    text-shadow: 0 0 20px #66ccff, 0 0 30px #1a75ff;
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px #4da6ff, 0 0 30px #4da6ff;
+  }
+  50% {
+    box-shadow: 0 0 30px #66ccff, 0 0 60px #1a75ff;
+  }
+}
+
+
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    opacity: 0.4;
+  }
+}
+
+/* === MODO MÓVIL === */
+@media (max-width: 768px) {
+
+  body {
+    padding: 0 10px;
+    font-size: 16px;
+  }
+
+  header, footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  h1, h2, h3 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .creed-container,
+  .lore-container,
+  .amarant-lore {
+    padding: 30px 15px;
+    font-size: 1rem;
+  }
+
+  .creed-title,
+  .lore-title,
+  .amarant-title {
+    font-size: 1.8rem;
+  }
+
+  .galeria-imagenes {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .galeria-imagenes img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  .btn,
+  button {
+    font-size: 1rem;
+    padding: 12px 20px;
+    width: 100%;
+  }
+
+  .vibrar {
+    font-size: 1.3rem;
+  }
+
+  #mensajeSorpresa {
+    font-size: 1rem;
+    padding: 20px;
+  }
+
+  #image-lightbox img {
+    max-width: 90vw;
+    max-height: 80vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .seccion {
+    margin: 20px auto;
+    max-width: 100%;
+  }
+
+  #cajaSorpresa {
+    width: 90%;
+    height: auto;
+  }
+
+  .confeti {
+    width: 6px;
+    height: 6px;
+  }
+}
+
+
+    
