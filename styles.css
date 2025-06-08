@@ -14,6 +14,14 @@
       scroll-behavior: smooth;
     }
 
+    .nombre-personalizado {
+  color: #1a75ff;
+  font-weight: bold;
+  text-shadow: 0 0 10px #ff0033;
+  font-family: 'Cinzel Decorative', serif;
+}
+
+
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: var(--negro);
