@@ -5,11 +5,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const mensaje = document.getElementById('mensajeSorpresa');
   const galeria = document.querySelector('.galeria-container');
   const imagenes = [
-    './images/DiLeva1.jpg',
+    './images/DiLeva.jpg',
     './images/DiLeva2.jpg',
     './images/DiLeva3.jpg',
     './images/DiLeva4.jpg',
-    './images/Dilevajuntos1.jpg',
+    './images/Dilevajuntos.jpg',
     './images/Dilevajuntos2.jpg',
   ];
 
