@@ -5,12 +5,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const mensaje = document.getElementById('mensajeSorpresa');
   const galeria = document.querySelector('.galeria-container');
   const imagenes = [
-    './images/DiLeva1.jpeg',
-    './images/DiLeva2.jpeg',
-    './images/DiLeva3.jpeg',
-    './images/DiLeva4.jpeg',
-    './images/Dilevajuntos1.png',
-    './images/Dilevajuntos2.png',
+    './images/DiLeva1.jpg',
+    './images/DiLeva2.jpg',
+    './images/DiLeva3.jpg',
+    './images/DiLeva4.jpg',
+    './images/Dilevajuntos1.jpg',
+    './images/Dilevajuntos2.jpg',
   ];
 
   // === Reproducir canción cumpleaños ===
